@@ -1,5 +1,6 @@
 <script setup>
-// import { scrollReveal } from 'vue-scroll-reveal';
+import UICursor from './components/UICursor.vue';
+
 import {
   faInstagram,
   faFacebook,
@@ -9,16 +10,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { createScrollRevealDirective } from "vue-scroll-reveal";
+
 const vScrollReveal = createScrollRevealDirective({
   distance: "80px",
   delay: 400,
   duration: 2500,
 });
 
-//scrollReveal().reveal('media-icons i', { delay: 500, origin: 'bottom', interval: 200 })
 </script>
 
 <template>
+  <u-i-cursor/>
   <section class="sec-1" v-scroll-reveal="{ delay: 600, origin: 'bottom' }">
     <div class="container">
       <h2 class="main-title" v-scroll-reveal="{ delay: 500, origin: 'left' }">
@@ -104,31 +106,31 @@ const vScrollReveal = createScrollRevealDirective({
           <li v-scroll-reveal="{ delay: 500, origin: 'left' }">
             <a href="#">
               <svg-icon class="icon" :fa-icon="faTelegram" :size="30" />
-              faTelegram
+              Telegram
             </a>
           </li>
           <li v-scroll-reveal="{ delay: 700, origin: 'left' }">
             <a href="#">
               <svg-icon class="icon" :fa-icon="faInstagram" :size="30" />
-              faInstagram
+              Instagram
             </a>
           </li>
           <li v-scroll-reveal="{ delay: 900, origin: 'left' }">
             <a href="#">
               <svg-icon class="icon" :fa-icon="faFacebook" :size="30" />
-              faFacebook
+              Facebook
             </a>
           </li>
           <li v-scroll-reveal="{ delay: 1100, origin: 'left' }">
             <a href="#">
               <svg-icon class="icon" :fa-icon="faTwitter" :size="30" />
-              faTwitter
+              Twitter
             </a>
           </li>
           <li v-scroll-reveal="{ delay: 1300, origin: 'left' }">
             <a href="#">
               <svg-icon class="icon" :fa-icon="faYoutube" :size="30" />
-              faYoutube
+              Youtube
             </a>
           </li>
         </div>
